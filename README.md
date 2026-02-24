@@ -33,23 +33,31 @@ We evaluated various regression models to capture the dependency of PRP on techn
 
 *Figure: Comparison of Linear, Quadratic, and Cubic models on sample data (left) and the final 3rd-degree polynomial model (right).*
 
-### 4. Predictive Model Selection (Ex. 10)
-To address multicollinearity and improve generalization, we compared the Full Linear Model against PCR and LASSO on a 35% validation set.
+### 4. Predictive Model Selection by Vendor (Ex. 10)
+To address multicollinearity and improve generalization, we compared the Full Linear Model against **PCR** and **LASSO** using a 65%/35% Train/Test split.
 
-| Modeling Strategy | MSE (Validation Set) | Key Advantage |
-| :--- | :---: | :--- |
-| **Full Linear Model** | *[Τιμή]* | Baseline accuracy |
-| **PCR** | *[Τιμή]* | Multicollinearity mitigation |
-| **LASSO** | *[Τιμή]* | Feature sparsity & selection |
+#### 📊 Model Performance Results (Test MSE)
+| Vendor ID | Samples (N) | MSE Full | MSE PCR | MSE LASSO |
+| :--- | :---: | :---: | :---: | :---: |
+| **7** | 13 | 1021.69 | 283.90 | **52.93** |
+| **8** | 32 | **263.14** | 345.47 | 358.12 |
+| **9** | 19 | 1313.71 | 2011.21 | **815.09** |
+| **10** | 13 | **1978.76** | 2365.95 | 1988.08 |
+| **11** | 12 | 1175.87 | 3240.54 | **345.26** |
+| **12** | 13 | 35085.17 | **20178.98** | 26241.51 |
+
+**Key Insights:** * **LASSO** demonstrated significant error reduction in smaller datasets (e.g., Vendor 7 & 11) by effectively handling feature sparsity.
+* **PCR** proved robust in cases of high dimensionality (Vendor 12), reducing MSE by filtering out low-variance noise.
 
 ## 📂 Repository Structure
-The project is divided into 10 distinct exercises. Each folder follows a modular dual-file structure:
+The project is organized into 10 distinct exercises. Each folder follows a modular dual-file structure:
 
 * 📂 **`Exercises/`**: Subfolders `Ex01` to `Ex10` containing:
     * 📄 `Group7ExiFun1.m`: The core function implementing the statistical logic.
     * 📄 `Group7ExiProg1.m`: The main script for data loading and plotting.
-* 📂 **`Data/`**: Contains `CPUPerformance.xlsx`.
+* 📂 **`Data/`**: Contains `CPUPerformance.xls`.
 * 📂 **`Plots/`**: High-resolution visualization highlights.
+* 📄 **`Full_Report.pdf`**: Comprehensive technical analysis and interpretations.
 
 ## 🛠️ Tech Stack
 * **Language:** MATLAB
