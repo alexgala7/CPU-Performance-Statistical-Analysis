@@ -42,9 +42,8 @@ The project is divided into 10 distinct exercises. Each folder follows a modular
 * 📂 **`Exercises/`**: Subfolders `Ex01` to `Ex10` containing:
     * 📄 `Group7ExiFun1.m`: The core function implementing the statistical logic.
     * 📄 `Group7ExiProg1.m`: The main script for data loading and plotting.
-* 📂 **`Data/`**: Contains `CPUPerformance.xls`.
+* 📂 **`Data/`**: Contains `CPUPerformance.xlsx`.
 * 📂 **`Plots/`**: High-resolution visualization highlights.
-* 📄 **`Full_Report.pdf`**: Comprehensive technical analysis and interpretations.
 
 ## 🛠️ Tech Stack
 * **Language:** MATLAB
