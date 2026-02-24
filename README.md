@@ -7,34 +7,40 @@ The analysis is performed on a dataset of 209 observations across 9 variables, i
 
 ### Key Methodologies
 * **Exploratory Data Analysis:** Empirical PDF modeling and histogram fitting.
-* **Hypothesis Testing:** Chi-square ($X^2$) goodness-of-fit, Student's t-tests, and Correlation testing (Fisher transformation).
+* **Hypothesis Testing:** Chi-square ($X^2$) goodness-of-fit, Student's t-tests, and Correlation testing.
 * **Resampling Techniques:** Bootstrap methods for robust confidence interval estimation.
 * **Predictive Modeling:** Simple, Multiple Linear, and Polynomial Regression.
 * **Advanced Selection:** Principal Component Regression (PCR) and LASSO regularization.
 
 ## 📈 Key Results & Visualizations
 
-### 1. Distribution & Modeling
-Detailed analysis of variables to determine underlying distributions. We used Chi-square tests to validate the fit of theoretical models to empirical data.
+### 1. Distribution & Modeling (Ex. 1-2)
+Detailed analysis to determine underlying distributions. We used Chi-square tests to validate the fit of theoretical models to empirical data, such as cycle time and cache memory.
 
 ![Distribution Fit](Plots/cpu_distribution_fit.png)
-[Image of histogram with a fitted probability density function curve]
 
-### 2. Regression & Diagnostic Analysis
+
+### 2. Manufacturer Benchmarking (Ex. 5)
+Using **Bootstrap resampling**, we compared the Published Performance (PRP) across different hardware manufacturers. The boxplot analysis helped identify statistically significant performance differences and outliers.
+
+![Manufacturer Comparison](Plots/manufacturer_comparison_boxplot.png)
+
+
+### 3. Regression & Diagnostic Analysis (Ex. 8-9)
 We evaluated various regression models to capture the dependency of PRP on technical specifications. The comparison between linear and polynomial fits helped identify the optimal model complexity.
 
 ![Regression Fit](Plots/regression_model_fit.png)
-[Image of various regression models compared on a scatter plot]
+
 *Figure: Comparison of Linear, Quadratic, and Cubic models on sample data (left) and the final 3rd-degree polynomial model (right).*
 
-### 3. Predictive Model Selection (Ex. 10)
+### 4. Predictive Model Selection (Ex. 10)
 To address multicollinearity and improve generalization, we compared the Full Linear Model against PCR and LASSO on a 35% validation set.
 
 | Modeling Strategy | MSE (Validation Set) | Key Advantage |
 | :--- | :---: | :--- |
-| **Full Linear Model** | *[Insert MSE]* | Baseline accuracy |
-| **PCR** | *[Insert MSE]* | Multicollinearity mitigation |
-| **LASSO** | *[Insert MSE]* | Feature sparsity & selection |
+| **Full Linear Model** | *[Τιμή]* | Baseline accuracy |
+| **PCR** | *[Τιμή]* | Multicollinearity mitigation |
+| **LASSO** | *[Τιμή]* | Feature sparsity & selection |
 
 ## 📂 Repository Structure
 The project is divided into 10 distinct exercises. Each folder follows a modular dual-file structure:
